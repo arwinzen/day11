@@ -31,7 +31,6 @@ const keysArr = Object.keys(keyStatus);
 window.addEventListener('keydown', keyDown);
 
 // logic for keydown event 
-// 
 function keyDown(evt){
     // check if recorded key is within the list of keys in keyStatus object
     if (keyStatus[evt.key]){
@@ -44,6 +43,7 @@ function keyDown(evt){
     // loop over each key stored in keyStatus object
     keysArr.forEach(function(key){
         // console.log(keyStatus[key]);
+
         // play clip if key matches
         if (keyStatus[key].pressed){
             keyStatus[key].clip.play();
